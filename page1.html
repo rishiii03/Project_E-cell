@@ -71,6 +71,26 @@
     }
 }
 
+    .grid_outerBox {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+    .grid_element {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        cursor: pointer;
+    }   
+    .grid_element.clicked{
+        background-color: red;
+    }
+
+    .Ecell_logo{
+        max-width: 100%;
+        height: auto;
+    }
 
     </style>
 
@@ -85,13 +105,47 @@
     </div>
 
  
-    <div class="elements">
+    <div class="elements">       
+        <div>
+            <img src="" alt="colour img">
+        </div>   
         
-        <img src="data:image/jpeg;base64,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" alt="coulor img">
+        <div class="Ecell_logo">
+            <img src="E-cell.logo.jpg" alt="logo of Ecell">
+        </div>
         
-        <img src="data:image/jpeg;base64,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" alt="logo of Ecell">
-    
-        <img src="https://www.w3schools.com/css/grid_gaps.png" alt="grid temp">
+        <div class="grid_outerBox">
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element"></div>
+            <div class="grid_element_last"></div>
+        </div>
     </div>
 
+    <script>
+        const gridElements = document.querySelectorAll('.grid_element');
+        const lastSquare = document.querySelector('.grid_element_last');
+        let Sequence =0;
+        gridElements.forEach((elements, index) => {
+            elements.addEventListener('click', () => {
+                item.classList.toggle('clicked');
+                Sequence++;
+                if (elements === lastSquare) {
+                    gridElements.forEach((gridElements, i) => {
+                        gridElements.style.transitionDelay = `${i * 0.2}s`;
+                        setTimeout(() => {
+                            gridElements.classList.remove('clicked');
+                        }, 200);
+                    });
+                    Sequence =0;
+                }
+            });
+        });
+    </script>
 </body>
+</html>
