@@ -18,9 +18,9 @@
             display:flex;
             column-gap: 30px;
             padding: 5px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
             flex-direction: row-reverse;
-
+            padding-right: 10%;
         }
 
         .navibar a {
@@ -31,6 +31,11 @@
             padding: 10px;
             text-decoration: none;
         }
+        
+        .navibar a:hover{
+        border: 1px solid transparent;
+        border-color:red;
+    }
 
         .element-container {
         display: flex;
@@ -43,8 +48,8 @@
             padding: 0px;
             justify-content: center;
             flex-direction: row;
-            display: inline-block;
             width: 30%;
+            margin:10%;
         }
 
         @media(max-width: 768px){
@@ -122,7 +127,7 @@
             <div class="grid_element"></div>
             <div class="grid_element"></div>
             <div class="grid_element"></div>
-            <div class="grid_element_last"></div>
+            <div class="grid_element grid_element_last"></div>
         </div>
     </div>
 
