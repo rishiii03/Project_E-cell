@@ -41,9 +41,8 @@
         .elements{
             display: flex;
             padding: 0px;
-        }
-
-        .elements{
+            justify-content: center;
+            flex-direction: row;
             display: inline-block;
             width: 30%;
         }
@@ -133,7 +132,7 @@
         let Sequence =0;
         gridElements.forEach((elements, index) => {
             elements.addEventListener('click', () => {
-                item.classList.toggle('clicked');
+                elements.classList.toggle('clicked');
                 Sequence++;
                 if (elements === lastSquare) {
                     gridElements.forEach((gridElements, i) => {
