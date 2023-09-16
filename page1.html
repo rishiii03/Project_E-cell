@@ -11,6 +11,12 @@
             padding:0;
         }
 
+        .gradient-block {
+            width:100px;
+            height:100px;
+            background: linear-gradient(315deg,red,yellow ,green,blue);
+        }
+
 
         .navibar{
             background-color:  #dad8d8;
@@ -84,11 +90,11 @@
     .grid_element {
         width: 100px;
         height: 100px;
-        background-color: blue;
+        background-color: rgb(4, 4, 44);
         cursor: pointer;
     }   
     .grid_element.clicked{
-        background-color: red;
+        background-color: rgb(97, 6, 6);
     }
 
     .Ecell_logo{
@@ -104,14 +110,14 @@
 <body>
     <div class="navibar">
     <a href="">LinkedIn</a>
-    <a href="">Grid</a>
-    <a href="">Home</a>
+    <a href="page1.html">Grid</a>
+    <a href="page2.html">Home</a>
     </div>
 
  
-    <div class="elements">       
-        <div>
-            <img src="" alt="colour img">
+    <div class="elements"> 
+
+        <div class="gradient-block">  
         </div>   
         
         <div class="Ecell_logo">
@@ -134,7 +140,7 @@
     <script>
         const gridElements = document.querySelectorAll('.grid_element');
         const lastSquare = document.querySelector('.grid_element_last');
-        let Sequence =0;
+        let Sequence=0;
         gridElements.forEach((elements, index) => {
             elements.addEventListener('click', () => {
                 elements.classList.toggle('clicked');

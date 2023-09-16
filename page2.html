@@ -5,7 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bio page</title>
 <style>
-.container {
+
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .navibar{
+            background-color:  #dad8d8;
+            overflow: hidden;
+            display:flex;
+            column-gap: 30px;
+            padding: 5px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+            flex-direction: row-reverse;
+            padding-right: 10%;
+        }
+
+        .navibar a {
+            float:right;
+            display: block; 
+            color: black;
+            text-align: right;
+            padding: 10px;
+            text-decoration: none;
+        }
+        
+        .navibar a:hover{
+        border: 1px solid transparent;
+        border-color:red;
+    }
+        .container {
             max-width: 50%;
             margin: 20px auto;
             padding: 10px;
@@ -69,6 +99,11 @@
 
 <body>
 
+    <div class="navibar">
+        <a href="">LinkedIn</a>
+        <a href="page1.html">Grid</a>
+        <a href="page2.html">Home</a>
+        </div>
         
         <div class="container">
             <img class="profile-image"   src="my_picture.jpeg" alt="pic of a guy standing">
