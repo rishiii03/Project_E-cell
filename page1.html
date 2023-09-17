@@ -172,8 +172,20 @@
     .grid_outerBox {
             display: grid;
             grid-template-columns: auto auto auto;
+            padding: 15px;
             aspect-ratio: 1;
+            background-color: rgb(201, 201, 201);
         }
+        
+        .grid_element_last {
+            width: calc(100% - 0.66vh);
+            height: calc(100% - 0.66vh);
+            aspect-ratio: 1;
+            transform-origin: center;
+            border-radius: 10px;
+            background-color: rgb(97, 6, 6);
+            cursor: pointer;
+        }   
 
     .grid_element {
         width: calc(100% - 0.66vh);
@@ -181,14 +193,26 @@
         aspect-ratio: 1;
         transform-origin: center;
         border-radius: 10px;
-        background-color: rgb(4, 4, 44);
+        background-color: rgb(13, 13, 105);
         cursor: pointer;
     }   
+
+    .grid_element_last {
+        width: calc(100% - 0.66vh);
+        height: calc(100% - 0.66vh);
+        aspect-ratio: 1;
+        transform-origin: center;
+        border-radius: 10px;
+        background-color: rgb(97, 6, 6);
+        cursor: pointer;
+    }   
+
     .grid_element.clicked{
         background-color: rgb(97, 6, 6);
     }
 
     .Ecell_logo{
+        background-color: beige;
         aspect-ratio: 1;
     }
 
@@ -200,7 +224,7 @@
     .gradient-img{
     /* height: 100%; */
     aspect-ratio: 1;
-    background-image: linear-gradient(to bottom right, white, black);
+    background-image: linear-gradient(to bottom right, rgba(16, 5, 111, 0.99), rgb(255, 0, 174));
     }
 
 
@@ -211,7 +235,7 @@
 
 <body>
     <div class="navibar">
-    <a href="">LinkedIn</a>
+    <a href='https://www.linkedin.com/in/rajarshi-koona/'>LinkedIn</a>
     <a href="page1.html">Grid</a>
     <a href="page2.html">Home</a>
     <div class="menu-icon">
@@ -230,7 +254,7 @@
         <div class="cell gradient-img"></div>   
         
         <div class="cell Ecell_logo">
-            <img src="E-cell.logo.jpg" alt="logo of Ecell">
+            <img src="E_cell_logo.png" alt="logo of Ecell">
         </div>
         
         <div class="cell grid_outerBox">
@@ -242,22 +266,23 @@
             <div class="grid_element"></div>
             <div class="grid_element"></div>
             <div class="grid_element"></div>
-            <div class="grid_element"></div>
+            <div class="grid_element grid_element_last"></div>
         </div>
     </div>
 
     <script>
         const gridElements = document.querySelectorAll('.grid_element');
         squares = [];
-        gridElements.forEach((elements, index) => {
-            elements.addEventListener('click', () => {          
+        gridElements.forEach((element, index) => {
+            element.addEventListener('click', () => {          
                 if (!squares.includes(element)) {
                     squares.push(element)
-                    element.classList.toggle('clicked')
-                        setTimeout(() => {
-                            gridElements.classList.remove('clicked');
+                    element.classList.toggle('clicked');
+                       setTimeout(() => {
+                            element.classList.remove('clicked');
                             squares.splice(squares.indexOf(element), 1);
                         }, 4000);
+
                     };
                 });
             });
