@@ -1,9 +1,11 @@
 # Project_E-cell
 
 ## overview
-This project consists of two pages
-1.An interactive responsive webpage consisting of a navigation bar 
-2.A minimalistic webpage displaying the biodata of Me
+This project consists of two pages.
+
+1.An interactive responsive webpage consisting of a navigation bar .
+
+2.A minimalistic webpage displaying the bio data of mine.
 
 
 ## Technologies Used
